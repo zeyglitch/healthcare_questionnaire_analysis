@@ -1,0 +1,23 @@
+# Environnement virtuel
+venv/
+.env
+
+# Fichiers de données et exports
+*.csv
+*.pdf
+*.xlsx
+*.xls
+
+# Cache Python et fichiers compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Configuration de l'IDE
+.vscode/
+.idea/

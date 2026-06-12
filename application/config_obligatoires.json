@@ -1,0 +1,67 @@
+{
+    "DOSSIER CARDIOLOGIE": [
+        "Score de Glasgow",
+        "Échelle de Borg (dyspnée)",
+        "HAD - Hospital Anxiety and Depression"
+    ],
+    "DOSSIER PNEUMOLOGIE": [
+        "Échelle de Borg (dyspnée)",
+        "MNA - Mini Nutritional Assessment",
+        "Personne de confiance désignée"
+    ],
+    "DOSSIER NEUROLOGIE": [
+        "CAM - Confusion Assessment Method",
+        "Test de l'horloge",
+        "EVA - Échelle Visuelle Analogique"
+    ],
+    "DOSSIER CHIRURGIE ORTHOPÉDIQUE": [
+        "Score de Glasgow",
+        "Échelle de Braden",
+        "Indice de Katz (ADL)"
+    ],
+    "DOSSIER MÉDECINE INTERNE": [
+        "Score de Glasgow",
+        "MNA - Mini Nutritional Assessment",
+        "Personne de confiance désignée"
+    ],
+    "DOSSIER GÉRIATRIE": [
+        "Indice de Katz (ADL)",
+        "GDS - Échelle de dépression gériatrique",
+        "Get Up and Go Test"
+    ],
+    "DOSSIER PÉDIATRIE": [
+        "Score de Glasgow",
+        "EVA - Échelle Visuelle Analogique",
+        "MNA - Mini Nutritional Assessment"
+    ],
+    "DOSSIER URGENCES": [
+        "Échelle de Braden",
+        "Barthel (autonomie fonctionnelle)",
+        "NRS 2002 - Dépistage nutritionnel"
+    ],
+    "DOSSIER RÉANIMATION": [
+        "Score de Glasgow",
+        "Échelle de Braden",
+        "Consentement éclairé"
+    ],
+    "DOSSIER SSR": [
+        "Indice de Katz (ADL)",
+        "MNA - Mini Nutritional Assessment",
+        "GIR - Grille AGGIR"
+    ],
+    "DOSSIER ONCOLOGIE": [
+        "Consentement éclairé",
+        "Directives anticipées",
+        "Score de Glasgow"
+    ],
+    "DOSSIER GASTRO-ENTÉROLOGIE": [
+        "EN - Échelle Numérique Douleur",
+        "Directives anticipées",
+        "Indice de Katz (ADL)"
+    ],
+    "DOSSIER MATERNITÉ": [
+        "Score de Glasgow",
+        "Indice de Katz (ADL)",
+        "MNA - Mini Nutritional Assessment"
+    ]
+}
