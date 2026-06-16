@@ -743,8 +743,8 @@ class AppQuestionnaires(ctk.CTk):
 
     def _load_csv(self):
         path = filedialog.askopenfilename(
-            title="Sélectionner le fichier CSV",
-            filetypes=[("Fichiers CSV", "*.csv"), ("Tous", "*.*")],
+            title="Sélectionner le fichier CSV ou TXT",
+            filetypes=[("Fichiers de données", "*.csv *.txt"), ("Tous", "*.*")],
         )
         if not path:
             return
