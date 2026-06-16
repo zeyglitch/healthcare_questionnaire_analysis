@@ -800,6 +800,22 @@ class AppQuestionnaires(ctk.CTk):
 
         row_idx = 0
 
+        # Calcul du comptage pour tous les questionnaires
+        comptage: dict[tuple[str, str], dict] = {}
+        if self.donnees:
+            for row in self.donnees:
+                questionnaire = row.get("QUESTIONNAIRE", "").strip()
+                question = row.get("QUESTION", "").strip()
+                reponse = row.get("REPONSE", "").strip()
+                
+                cle = (questionnaire, question)
+                if cle not in comptage:
+                    comptage[cle] = {"total": 0, "remplies": 0}
+                
+                comptage[cle]["total"] += 1
+                if reponse:
+                    comptage[cle]["remplies"] += 1
+
         for questionnaire in sorted(self.questionnaires_decouverts):
             questions = self.questionnaires_decouverts[questionnaire]
             config_questions = self.config.get(questionnaire, [])
@@ -859,8 +875,12 @@ class AppQuestionnaires(ctk.CTk):
                 var = ctk.BooleanVar(value=is_checked)
                 self.checkbox_vars[(questionnaire, question)] = var
 
+                row_frame = ctk.CTkFrame(q_container, fg_color="transparent")
+                row_frame.pack(fill="x", pady=4)
+                row_frame.grid_columnconfigure(0, weight=1)
+
                 ctk.CTkCheckBox(
-                    q_container,
+                    row_frame,
                     text=question,
                     variable=var,
                     font=ctk.CTkFont(size=13),
@@ -870,7 +890,34 @@ class AppQuestionnaires(ctk.CTk):
                     checkmark_color="white",
                     border_color=THEME["border"],
                     border_width=2,
-                ).pack(anchor="w", pady=6)
+                ).grid(row=0, column=0, sticky="w")
+
+                # Badge avec le nombre de réponses
+                info = comptage.get((questionnaire, question), {"total": 0, "remplies": 0})
+                nb_total = info["total"]
+                nb_remplies = info["remplies"]
+                
+                taux = (nb_remplies / nb_total * 100) if nb_total > 0 else 0
+                
+                if taux >= 100:
+                    badge_color = THEME["success"]
+                elif taux >= 60:
+                    badge_color = THEME["warning"]
+                else:
+                    badge_color = THEME["danger"]
+                    
+                badge_text = f"{nb_remplies} rép."
+                
+                badge = ctk.CTkLabel(
+                    row_frame,
+                    text=f"  {badge_text}  ({nb_total} total)  ",
+                    font=ctk.CTkFont(size=11, weight="bold"),
+                    text_color=THEME["text_light"],
+                    fg_color=badge_color,
+                    corner_radius=12,
+                    height=24,
+                )
+                badge.grid(row=0, column=1, padx=(10, 0), sticky="e")
 
             row_idx += 1
 
