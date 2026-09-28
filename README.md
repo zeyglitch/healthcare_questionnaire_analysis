@@ -4,7 +4,7 @@ Application Python de traitement automatisé des exports de questionnaires hospi
 
 ## Contexte
 
-Développée pendant un stage de 3ème année d'école d'ingénieur (ISIS Castres, partenaire INSA) au Département d'Information Médicale d'un Centre Hospitalier public, entre avril et juin 2026.
+Développé pendant un stage de 3ème année d'école d'ingénieur (ISIS Castres, partenaire INSA) au Département d'Information Médicale du Centre Hospitalier de Cahors, entre avril et juin 2026. Le concept général de l'applicatif a été défini par le DIM du Centre Hospitalier de Cahors ; le code présenté ici en est la réalisation technique, publiée avec leur accord.
 
 Les questionnaires hospitaliers (recueil de données patients, indicateurs qualité) génèrent des exports CSV volumineux qui nécessitaient jusqu'alors :
 - une vérification manuelle du taux de remplissage question par question dans Excel ;
