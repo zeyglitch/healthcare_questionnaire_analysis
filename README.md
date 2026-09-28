@@ -39,6 +39,7 @@ Les questionnaires hospitaliers (recueil de données patients, indicateurs quali
 - **Publication autorisée** par le maître de stage.
 - Code **entièrement générique**, sans référence à un établissement ou à une nomenclature interne.
 - Le dossier `donnees/` (jeux d'essais et exports générés) est **exclu du versionnement** via `.gitignore` pour garantir qu'aucune donnée réelle ne puisse être publiée par mégarde.
+- Publication réalisée avec l'accord du Centre Hospitalier de Cahors.
 
 ## Structure
 
