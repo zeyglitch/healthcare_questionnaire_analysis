@@ -27,7 +27,7 @@ Les questionnaires hospitaliers (recueil de données patients, indicateurs quali
 ## Stack technique
 
 - Python 3.9+
-- Pandas
+- Module `csv` de la bibliothèque standard (lecture des exports)
 - CustomTkinter (interface graphique moderne)
 - fpdf2 (génération PDF avec graphiques)
 - Matplotlib (visualisations intégrées au PDF)
